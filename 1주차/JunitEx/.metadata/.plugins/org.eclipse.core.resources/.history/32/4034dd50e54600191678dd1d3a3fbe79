@@ -17,10 +17,11 @@ public class CoffeeMakerTest {
 	public void testCoffeeMaker() {
 		Recipe r=new Recipe();
 		r.setName("name");
-//		r.setAmtCoffee("100");
-//		r.setAmtMilk("100");
-//		r.setAmtSugar("100");
-//		r.setAmtChocolate("100");
+		r.setPrice(priceString);
+		r.setAmtCoffee(coffeeString);
+		r.setAmtMilk(milkString);
+		r.setAmtSugar(sugarString);
+		r.setAmtChocolate(chocolateString);
 		
 	}
 	

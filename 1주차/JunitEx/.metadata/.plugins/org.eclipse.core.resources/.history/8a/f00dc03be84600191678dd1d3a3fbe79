@@ -17,6 +17,7 @@ public class CoffeeMakerTest {
 	public void testCoffeeMaker() {
 		Recipe r=new Recipe();
 		r.setName("name");
+		r.setPrice("100");
 //		r.setAmtCoffee("100");
 //		r.setAmtMilk("100");
 //		r.setAmtSugar("100");
