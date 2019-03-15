@@ -1,0 +1,87 @@
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class CoffeeMakerTest {
+
+	@Test
+	public void testCoffeeMaker() {
+		fail("Not yet implemented");
+	}
+	
+	@Test
+	public void testCoffeeMakerFail() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testAddRecipe() {
+		fail("Not yet implemented");
+	}
+	
+	@Test
+	public void testAddRecipeFail() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testDeleteRecipe() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testDeleteRecipeFail() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testEditRecipe() {
+		fail("Not yet implemented");
+	}
+	
+	@Test
+	public void testEditRecipeFail() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testAddInventory() {
+		fail("Not yet implemented");
+	}
+	
+	@Test
+	public void testAddInventoryFail() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testCheckInventory() {
+		fail("Not yet implemented");
+	}
+	
+	@Test
+	public void testCheckInventoryFail() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testMakeCoffee() {
+		fail("Not yet implemented");
+	}
+	
+	@Test
+	public void testMakeCoffeeFail() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testGetRecipes() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testGetRecipes() {
+		fail("Not yet implemented");
+	}
+
+}
