@@ -49,94 +49,94 @@
 //		//super.setUp();
 //	}
 //
-//	@Test
-//	public void testAddRecipe() {
-//		Recipe[] rbArray;
-//		cm.addRecipe(r1);
-//		rbArray=cm.getRecipes();
-//		assertEquals("latte", rbArray[0].getName());
-//		assertEquals(4500, rbArray[0].getPrice());
-//		assertEquals(4, rbArray[0].getAmtCoffee());
-//		assertEquals(5, rbArray[0].getAmtMilk());
-//		assertEquals(3, rbArray[0].getAmtSugar());
-//		assertEquals(2, rbArray[0].getAmtChocolate());	
-//		
-//		cm.addRecipe(r2);
-//		rbArray=cm.getRecipes();
-//		assertEquals("americano", rbArray[1].getName());
-//		assertEquals(3500, rbArray[1].getPrice());
-//		assertEquals(3, rbArray[1].getAmtCoffee());
-//		assertEquals(0, rbArray[1].getAmtMilk());
-//		assertEquals(0, rbArray[1].getAmtSugar());
-//		assertEquals(0, rbArray[1].getAmtChocolate());		
-//		
-//		cm.addRecipe(r3);
-//		rbArray=cm.getRecipes();
-//		assertEquals("Latte macciato", rbArray[2].getName());
-//		assertEquals(5000, rbArray[2].getPrice());
-//		assertEquals(3, rbArray[2].getAmtCoffee());
-//		assertEquals(3, rbArray[2].getAmtMilk());
-//		assertEquals(2, rbArray[2].getAmtSugar());
-//		assertEquals(4, rbArray[2].getAmtChocolate());		
-//		
-//		cm.addRecipe(r4);
-//		rbArray=cm.getRecipes();
-//		assertEquals("green tea", rbArray[3].getName());
-//		assertEquals(4000, rbArray[3].getPrice());
-//		assertEquals(0, rbArray[3].getAmtCoffee());
-//		assertEquals(2, rbArray[3].getAmtMilk());
-//		assertEquals(3, rbArray[3].getAmtSugar());
-//		assertEquals(0, rbArray[3].getAmtChocolate());		
-//	}
-//	
 ////	@Test
-////	public void testAddRecipeFail() {
-////		fail("Not yet implemented");
+////	public void testAddRecipe() {
+////		Recipe[] rbArray;
+////		cm.addRecipe(r1);
+////		rbArray=cm.getRecipes();
+////		assertEquals("latte", rbArray[0].getName());
+////		assertEquals(4500, rbArray[0].getPrice());
+////		assertEquals(4, rbArray[0].getAmtCoffee());
+////		assertEquals(5, rbArray[0].getAmtMilk());
+////		assertEquals(3, rbArray[0].getAmtSugar());
+////		assertEquals(2, rbArray[0].getAmtChocolate());	
+////		
+////		cm.addRecipe(r2);
+////		rbArray=cm.getRecipes();
+////		assertEquals("americano", rbArray[1].getName());
+////		assertEquals(3500, rbArray[1].getPrice());
+////		assertEquals(3, rbArray[1].getAmtCoffee());
+////		assertEquals(0, rbArray[1].getAmtMilk());
+////		assertEquals(0, rbArray[1].getAmtSugar());
+////		assertEquals(0, rbArray[1].getAmtChocolate());		
+////		
+////		cm.addRecipe(r3);
+////		rbArray=cm.getRecipes();
+////		assertEquals("Latte macciato", rbArray[2].getName());
+////		assertEquals(5000, rbArray[2].getPrice());
+////		assertEquals(3, rbArray[2].getAmtCoffee());
+////		assertEquals(3, rbArray[2].getAmtMilk());
+////		assertEquals(2, rbArray[2].getAmtSugar());
+////		assertEquals(4, rbArray[2].getAmtChocolate());		
+////		
+////		cm.addRecipe(r4);
+////		rbArray=cm.getRecipes();
+////		assertEquals("green tea", rbArray[3].getName());
+////		assertEquals(4000, rbArray[3].getPrice());
+////		assertEquals(0, rbArray[3].getAmtCoffee());
+////		assertEquals(2, rbArray[3].getAmtMilk());
+////		assertEquals(3, rbArray[3].getAmtSugar());
+////		assertEquals(0, rbArray[3].getAmtChocolate());		
 ////	}
-//
-//	@Test
-//	public void testDeleteRecipe() {
-//		cm.addRecipe(r1);
-//		assertEquals("latte", cm.deleteRecipe(0));
-//		cm.addRecipe(r2);
-//		assertEquals("americano", cm.deleteRecipe(1));
-//		cm.addRecipe(r3);
-//		assertEquals("Latte macciato", cm.deleteRecipe(2));
-//		cm.addRecipe(r4);
-//		assertEquals("green tea", cm.deleteRecipe(3));
-//	}
-//
+////	
+//////	@Test
+//////	public void testAddRecipeFail() {
+//////		fail("Not yet implemented");
+//////	}
+////
 ////	@Test
-////	public void testDeleteRecipeFail() {
-////		fail("Not yet implemented");
+////	public void testDeleteRecipe() {
+////		cm.addRecipe(r1);
+////		assertEquals("latte", cm.deleteRecipe(0));
+////		cm.addRecipe(r2);
+////		assertEquals("americano", cm.deleteRecipe(1));
+////		cm.addRecipe(r3);
+////		assertEquals("Latte macciato", cm.deleteRecipe(2));
+////		cm.addRecipe(r4);
+////		assertEquals("green tea", cm.deleteRecipe(3));
 ////	}
-//
-//	@Test
-//	public void testEditRecipe() {
-//		cm.addRecipe(r1);
-//		cm.editRecipe(0, r3);
-//		Recipe[] rbArray=cm.getRecipes();
-//		assertEquals("Latte macciato", rbArray[0].getName());
-//		assertEquals(5000, rbArray[0].getPrice());
-//		assertEquals(3, rbArray[0].getAmtCoffee());
-//		assertEquals(3, rbArray[0].getAmtMilk());
-//		assertEquals(2, rbArray[0].getAmtSugar());
-//		assertEquals(4, rbArray[0].getAmtChocolate());		
-//		
-//		cm.editRecipe(0, r4);
-//		rbArray=cm.getRecipes();
-//		assertEquals("green tea", rbArray[0].getName());
-//		assertEquals(4000, rbArray[0].getPrice());
-//		assertEquals(0, rbArray[0].getAmtCoffee());
-//		assertEquals(2, rbArray[0].getAmtMilk());
-//		assertEquals(3, rbArray[0].getAmtSugar());
-//		assertEquals(0, rbArray[0].getAmtChocolate());	
-//	}
-//	
+////
+//////	@Test
+//////	public void testDeleteRecipeFail() {
+//////		fail("Not yet implemented");
+//////	}
+////
 ////	@Test
-////	public void testEditRecipeFail() {
-////		fail("Not yet implemented");
+////	public void testEditRecipe() {
+////		cm.addRecipe(r1);
+////		cm.editRecipe(0, r3);
+////		Recipe[] rbArray=cm.getRecipes();
+////		assertEquals("Latte macciato", rbArray[0].getName());
+////		assertEquals(5000, rbArray[0].getPrice());
+////		assertEquals(3, rbArray[0].getAmtCoffee());
+////		assertEquals(3, rbArray[0].getAmtMilk());
+////		assertEquals(2, rbArray[0].getAmtSugar());
+////		assertEquals(4, rbArray[0].getAmtChocolate());		
+////		
+////		cm.editRecipe(0, r4);
+////		rbArray=cm.getRecipes();
+////		assertEquals("green tea", rbArray[0].getName());
+////		assertEquals(4000, rbArray[0].getPrice());
+////		assertEquals(0, rbArray[0].getAmtCoffee());
+////		assertEquals(2, rbArray[0].getAmtMilk());
+////		assertEquals(3, rbArray[0].getAmtSugar());
+////		assertEquals(0, rbArray[0].getAmtChocolate());	
 ////	}
+////	
+//////	@Test
+//////	public void testEditRecipeFail() {
+//////		fail("Not yet implemented");
+//////	}
 //
 //	@Test
 //	public void testAddInventory() {
@@ -155,48 +155,48 @@
 ////	public void testAddInventoryFail() {
 ////		fail("Not yet implemented");
 ////	}
-//
-//	@Test
-//	public void testCheckInventory() {
-//		Assert.assertEquals("Coffee: 15\nMilk: 15\nSugar: 15\nChocolate: 15\n",cm.checkInventory());
-//	}
-//	
+////
 ////	@Test
-////	public void testCheckInventoryFail() {
+////	public void testCheckInventory() {
+////		Assert.assertEquals("Coffee: 15\nMilk: 15\nSugar: 15\nChocolate: 15\n",cm.checkInventory());
+////	}
+////	
+//////	@Test
+//////	public void testCheckInventoryFail() {
+//////		fail("Not yet implemented");
+//////	}
+////
+////	@Test
+////	public void testMakeCoffee() {
+////		String expectedR1="Coffe: 11\n"+
+////				"Milk: 10\n"+
+////				"Sugar: 12\n"+
+////				"Chocolate: 13\n";
+////		String expectedR2="Coffe: 5\n"+
+////				"Milk: 10\n"+
+////				"Sugar: 12\n"+
+////				"Chocolate: 13\n";
+////		cm.addRecipe(r1);
+////		assertEquals(3000, cm.makeCoffee(0, 7500));
+////		assertEquals(expectedR1, cm.checkInventory());
+////		cm.addRecipe(r2);
+////		assertEquals(3500, cm.makeCoffee(1, 7000));
+////		assertEquals(expectedR2, cm.checkInventory());
+////	}
+////	
+//////	@Test
+//////	public void testMakeCoffeeFail() {
+//////		fail("Not yet implemented");
+//////	}
+////
+////	@Test
+////	public void testGetRecipes() {
 ////		fail("Not yet implemented");
 ////	}
-//
-//	@Test
-//	public void testMakeCoffee() {
-//		String expectedR1="Coffe: 11\n"+
-//				"Milk: 10\n"+
-//				"Sugar: 12\n"+
-//				"Chocolate: 13\n";
-//		String expectedR2="Coffe: 5\n"+
-//				"Milk: 10\n"+
-//				"Sugar: 12\n"+
-//				"Chocolate: 13\n";
-//		cm.addRecipe(r1);
-//		assertEquals(3000, cm.makeCoffee(0, 7500));
-//		assertEquals(expectedR1, cm.checkInventory());
-//		cm.addRecipe(r2);
-//		assertEquals(3500, cm.makeCoffee(1, 7000));
-//		assertEquals(expectedR2, cm.checkInventory());
-//	}
-//	
-////	@Test
-////	public void testMakeCoffeeFail() {
-////		fail("Not yet implemented");
-////	}
-//
-//	@Test
-//	public void testGetRecipes() {
-//		fail("Not yet implemented");
-//	}
-//
-////	@Test
-////	public void testGetRecipesFail() {
-////		fail("Not yet implemented");
-////	}
+////
+//////	@Test
+//////	public void testGetRecipesFail() {
+//////		fail("Not yet implemented");
+//////	}
 //
 //}

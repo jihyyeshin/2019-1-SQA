@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="CoffeeMakerTest" project="CoffeeMaker" tests="10" started="10" failures="0" errors="0" ignored="0">
+  <testsuite name="CoffeeMakerTest" time="0.001">
+    <testcase name="testDeleteRecipe2" classname="CoffeeMakerTest" time="0.001"/>
+    <testcase name="testCheckInventory" classname="CoffeeMakerTest" time="0.0"/>
+    <testcase name="testAddInventory" classname="CoffeeMakerTest" time="0.0"/>
+    <testcase name="testMakeCoffee" classname="CoffeeMakerTest" time="0.0"/>
+    <testcase name="testEditRecipeFail" classname="CoffeeMakerTest" time="0.0"/>
+    <testcase name="testDeleteRecipe" classname="CoffeeMakerTest" time="0.0"/>
+    <testcase name="testAddRecipe" classname="CoffeeMakerTest" time="0.0"/>
+    <testcase name="testEditRecipe" classname="CoffeeMakerTest" time="0.0"/>
+    <testcase name="testGetRecipes" classname="CoffeeMakerTest" time="0.0"/>
+    <testcase name="testAddRecipeFail" classname="CoffeeMakerTest" time="0.0"/>
+  </testsuite>
+</testrun>
