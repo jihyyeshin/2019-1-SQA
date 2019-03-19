@@ -14,7 +14,6 @@ public class example {
 
 	@Before
 	public void setUp() throws RecipeException {
-		CoffeeMaker cm= new CoffeeMaker();
 		r1=new Recipe();
 		r1.setName("latte");
 		r1.setPrice("4500");
@@ -33,7 +32,7 @@ public class example {
 		
 		r3=new Recipe();
 		r3.setName("Latte macciato");
-		r3.setPrice("5-00");
+		r3.setPrice("5000");
 		r3.setAmtCoffee("3");
 		r3.setAmtMilk("3");
 		r3.setAmtSugar("2");
