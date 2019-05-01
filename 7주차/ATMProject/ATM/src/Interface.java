@@ -5,24 +5,27 @@ import java.awt.Color;
 import java.text.DateFormat;
 import java.lang.Runtime.*;
 
+
+
 public class Interface extends Account {
 
-//Default Constructor 
-	public Interface() {
+	//Default Constructor 
+	public Interface () {
 		super(); // Calling Parent Class Constructor i.e., Account
 	}
 
-//fastCashMenu for Customer's Transaction
+	//fastCashMenu for Customer's Transaction
 	public void fastCashMenu(CustomerInfo cust) {
-		try {
+		try  
+		{		
 			Account ac = new Account();
 			AccountTransaction aT = new AccountTransaction();
-			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+			BufferedReader br = new BufferedReader (new InputStreamReader (System.in) );
 			CustomerInfo cust2 = new CustomerInfo();
-			int ch, i = 0;
+			int ch , i = 0;
 			Integer withdrawAmount = 0;
-			Integer originalBalance = Integer.parseInt(cust.startingBalance);
-			String str;
+			Integer originalBalance = Integer.parseInt(cust.startingBalance) ;
+			String str ;
 			System.out.println("1) 500");
 			System.out.println("2) 1000");
 			System.out.println("3) 2000");
@@ -34,15 +37,16 @@ public class Interface extends Account {
 			System.out.println("Select  one  of  the  denominations  of  money : ");
 			str = br.readLine();
 			ch = Integer.parseInt(str);
-			switch (ch) {
+			switch(ch) {
 			case 1:
 				System.out.print("Are you sure you want to withdraw Rs. 500 ( Y / N ) ");
 				str = br.readLine();
 				if (str.equalsIgnoreCase("y")) {
 					withdrawAmount = 500;
 					aT.withdrawCash(cust, withdrawAmount);
-				}
+				} 
 				break;
+
 
 			case 2:
 				System.out.print("Are you sure you want to withdraw Rs. 1000 ( Y / N ) ");
@@ -54,6 +58,7 @@ public class Interface extends Account {
 
 				break;
 
+
 			case 3:
 				System.out.print("Are you sure you want to withdraw Rs. 2000 ( Y / N ) ");
 				str = br.readLine();
@@ -62,6 +67,7 @@ public class Interface extends Account {
 					aT.withdrawCash(cust, withdrawAmount);
 				}
 				break;
+
 
 			case 4:
 				System.out.print("Are you sure you want to withdraw Rs. 5000 ( Y / N ) ");
@@ -100,6 +106,7 @@ public class Interface extends Account {
 				}
 				break;
 
+
 			case 8:
 				System.exit(0);
 			}
@@ -108,15 +115,16 @@ public class Interface extends Account {
 		}
 	}
 
-//normalCash for Customer's Transaction	
+	//normalCash for Customer's Transaction	
 	public void normalCash(CustomerInfo cust) {
-		try {
+		try 
+		{
 			AccountTransaction aT = new AccountTransaction();
 			Integer withdrawAmount = 0;
 			Date now = new Date();
-			String str, todaysDate;
+			String str , todaysDate;
 			todaysDate = now.toString();
-			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+			BufferedReader br = new BufferedReader (new InputStreamReader(System.in) );
 			System.out.print("Enter The Withdawal Amount : ");
 			str = br.readLine();
 			withdrawAmount = Integer.parseInt(str);
@@ -125,26 +133,27 @@ public class Interface extends Account {
 
 				System.out.println("Amount Cant Be In Negative");
 
-			} else if (withdrawAmount > Integer.parseInt(cust.startingBalance)) {
+			} else if (withdrawAmount> Integer.parseInt(cust.startingBalance)) {
 
 				System.out.println("Dont Have Enough Money To Withdraw");
 
 			} else {
 
-				aT.withdrawCash(cust, withdrawAmount);
+				aT.withdrawCash(cust,withdrawAmount);
 
 			}
 
 		} catch (IOException ioEx) {
 			System.out.println(ioEx);
 		}
-	}
+	}	
 
-//printReceiptWithdraw
-	public void printReceipt(CustomerInfo c, String todaysDate, Integer Amount, String receiptType) {
+	//printReceiptWithdraw
+	public void printReceipt(CustomerInfo c , String todaysDate , Integer Amount , String receiptType) {
 		String choice = null;
-		try {
-			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		try 
+		{
+			BufferedReader br = new BufferedReader (new InputStreamReader(System.in) );
 			System.out.print("Do you want to print Receipt ( Y / N )");
 			choice = br.readLine();
 			if (choice.equalsIgnoreCase("y")) {
@@ -161,17 +170,20 @@ public class Interface extends Account {
 
 	}
 
-//customerMenu For Customer Transaction Options
-	public void customerMenu(CustomerInfo cust) {
-		try {
+
+	//customerMenu For Customer Transaction Options
+	public void customerMenu( CustomerInfo cust ) {
+		try 
+		{	
 			AccountTransaction aT = new AccountTransaction();
 			CustomerInfo cust2 = new CustomerInfo();
 			Account ac = new Account();
-			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+			BufferedReader br = new BufferedReader ( new InputStreamReader (System.in) );
 			int choice = 0;
 			Integer balance = 0;
 			String str, option = "y";
-			do {
+			do 
+			{	
 				System.out.println("1 ---- Withdraw Cash");
 				System.out.println("2 ---- Cash Transfer");
 				System.out.println("3 ---- Deposit Cash");
@@ -182,20 +194,20 @@ public class Interface extends Account {
 				choice = Integer.parseInt(str);
 				switch (choice) {
 				case 1: // Withdraw Cash
-					String c = "a";
+					String c = "a" ;
 					System.out.println("a) Fast Cash");
 					System.out.println("b) Normal Cash");
 					System.out.println("Please Select A Mode Of Withdrawal");
-					c = br.readLine();
-					if (c.equalsIgnoreCase("a")) {
-						fastCashMenu(cust);
+					c = br.readLine();	
+					if (c.equalsIgnoreCase("a")){
+						fastCashMenu(cust);	
 					} else if (c.equalsIgnoreCase("b")) {
 						normalCash(cust);
 					}
 					break;
 
-				case 2: // Cash Transfer
-					String transferAmount = null;
+				case 2: //Cash Transfer
+					String transferAmount = null ;
 					String aNum = null;
 					System.out.print("Enter Amount In Multiples Of 500 : ");
 					transferAmount = br.readLine();
@@ -204,25 +216,25 @@ public class Interface extends Account {
 					aNum = br.readLine();
 					cust2 = ac.checkAccountNumber(Integer.parseInt(aNum));
 					if (cust2 != null) {
-						aT.transferCash(cust, cust2, balance);
+						aT.transferCash(cust , cust2 , balance);
 					}
 					break;
 
-				case 3: // Deposit Cash
+				case 3: //Deposit Cash
 					String depositAmount = null;
 					System.out.print("Enter Amount To Be Deposit ");
 					depositAmount = br.readLine();
 					Integer amount = Integer.parseInt(depositAmount);
-					if (amount < 0) {
+					if ( amount < 0 ) {
 						System.out.println("Amount Cant Be In Negative");
 					} else {
-						aT.depositCash(cust, amount);
+						aT.depositCash(cust,amount);
 					}
 					break;
 
-				case 4: // Display Balance
+				case 4: //Display Balance
 					balance = aT.displayBalance(cust);
-					System.out.println("Your Balance Is ::: " + balance);
+					System.out.println ("Your Balance Is ::: " + balance);
 					break;
 
 				case 5:
@@ -236,16 +248,18 @@ public class Interface extends Account {
 		}
 	}
 
-//adminMenu For creating, searching, deleting , updating CustomerRecords   
+	//adminMenu For creating, searching, deleting , updating CustomerRecords   
 	public void adminMenu() {
-		try {
+		try 
+		{		
 			Account ac = new Account();
 			CustomerInfo c = new CustomerInfo();
-			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-			int choice = 0;
+			BufferedReader br = new BufferedReader (new InputStreamReader(System.in) );
+			int choice = 0 ;
 			int accountNumber = 0;
-			String str, option = "y";
-			do {
+			String str,option = "y";
+			do
+			{
 				System.out.println("1 ---- Create New Account");
 				System.out.println("2 ---- Delete Existing Account");
 				System.out.println("3 ---- Update Account Information");
@@ -264,15 +278,15 @@ public class Interface extends Account {
 					} while (option.equalsIgnoreCase("y"));
 					break;
 
-				case 2: // For Deleting Customer Info
-					System.out.print("Enter the Account Number , which you want to Delete : ");
+				case 2: //For Deleting Customer Info
+					System.out.print("Enter the Account Number , which you want to Delete : "); 
 					str = br.readLine();
 					accountNumber = Integer.parseInt(str);
 					ac.deleteCustomer(accountNumber);
 					break;
 
-				case 3: // For Updating Customer Info
-					System.out.print("Enter The Account Number : ");
+				case 3: //For Updating Customer Info
+					System.out.print("Enter The Account Number : "); 
 					str = br.readLine();
 					accountNumber = Integer.parseInt(str);
 					ac.updateCustomer(accountNumber);
@@ -283,7 +297,7 @@ public class Interface extends Account {
 					break;
 
 				case 5:
-					// View Reports
+					//View Reports
 					break;
 
 				case 6:
@@ -291,40 +305,41 @@ public class Interface extends Account {
 				}// end of Switch
 				System.out.print("Do You Want To Go To Main Menu  ( Y / N ) : ");
 				option = br.readLine();
-			} while (option.equalsIgnoreCase("y")); // end do while
-		} catch (IOException ioEx) {
+			} while(option.equalsIgnoreCase("y")); //end do while
+		} catch (IOException ioEx)  {
 			System.out.println(ioEx);
 		}
 	}
 
-//Taking input From Customer And Match Its LoginName And PinCode In File And Returning That Whole Object If matches right
-	public CustomerInfo enterLoginPinCode() {
-		try {
+	//Taking input From Customer And Match Its LoginName And PinCode In File And Returning That Whole Object If matches right
+	public CustomerInfo enterLoginPinCode () {
+		try 
+		{		
 			CustomerInfo c = new CustomerInfo();
 			Account ac = new Account();
-			String loginName = null, pCode = null;
-			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+			String loginName = null , pCode = null;
+			BufferedReader br = new BufferedReader (new InputStreamReader (System.in) );
 			System.out.print("Enter Your LoginName ");
 			loginName = br.readLine();
 			System.out.println();
 			System.out.print("Enter Your Pin Code ");
 			pCode = br.readLine();
 			System.out.println();
-			c = checkLoginPinCode(loginName, pCode);
+			c = checkLoginPinCode(loginName,pCode);
 			return c;
-		} catch (IOException ioEx) {
+		} catch (IOException ioEx)  {
 			System.out.println(ioEx);
 		}
 		return null;
 	}
 
-//Start Main ()
-	public static void main(String[] args) {
-		// public native void cls();
-		// final static String ESC = "\033[";
-		// Runtime.getRuntime().exec("cls");
-		// System.out.flush();
-		String[] input = { "name", "pcode" };
+	//Start Main ()
+	public static void main (String[] args) { 
+		//public native void cls();
+		//final static String ESC = "\033[";
+		//Runtime.getRuntime().exec("cls");
+		//System.out.flush();
+		String[] input = { "shinjihye", "12" };
 		args = input;
 		AccountTransaction aT = new AccountTransaction();
 		Account ac = new Account();
@@ -332,17 +347,17 @@ public class Interface extends Account {
 		CustomerInfo c = new CustomerInfo();
 		String loginName = args[0];
 		String pCode = args[1];
-		c = ac.checkLoginPinCode(args[0], args[1]);
-		if (loginName.equals("name") && pCode.equals("pcode")) {
+		c = ac.checkLoginPinCode(args[0],args[1]);
+		if ( loginName.equals("name") && pCode.equals("pcode") )  {
 			System.out.println("Welcome Administrator");
 			in.adminMenu();
-		} else if (c != null) {
-			c = ac.checkLoginPinCode(args[0], args[1]);
+		} else  if ( c != null ) {
+			c = ac.checkLoginPinCode(args[0],args[1]);
 			System.out.println("Welcome , " + c.holderName.toUpperCase());
 			in.customerMenu(c);
 		} else {
-			System.out.println("Your UserName & PinCode Is Incorrect");
-			// System.out.println("Enter Again : ");
+			System.out.println ("Your UserName & PinCode Is Incorrect");
+			//System.out.println("Enter Again : ");
 		}
 	}// End Main
 
