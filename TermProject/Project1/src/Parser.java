@@ -85,25 +85,20 @@ public class Parser
           case 1: 
                   break;
 
-
+          // 원래 1개 받아야 하는 명령어 들이 들어옴
           // Commands with one integer number of lines argument.
           case 2: arg1 = getNextToken(UNDELIMITED);
-
                   if((arg1 == null) || !validNum(arg1))
-                     return params;
+                	  return params;
                   params.setIntArgs( (new Integer(arg1)).intValue(), 1);
-
                   break;
-
 
           // Commands with two integer # lines arguments.
           case 3: arg1 = getNextToken(UNDELIMITED);
                   arg2 = getNextToken(UNDELIMITED);
-
                   if((arg1 == null) || !validNum(arg1) || 
                      (arg2 == null) || !validNum(arg2))
                         return params;
-
                   params.setIntArgs( (new Integer(arg1)).intValue(), 1);
                   params.setIntArgs( (new Integer(arg2)).intValue(), 2);
                   break;
@@ -111,10 +106,8 @@ public class Parser
 
           // Commands with one delimited string argument
           case 4: arg1 = getNextToken(DELIMITED);
-
                   if(arg1 == null)
                      return params;
-
                   params.setStrArgs(arg1, 1);
                   break;
 
@@ -122,10 +115,8 @@ public class Parser
           // Commands with one integer # lines and one delimited string argument.
           case 5: arg1 = getNextToken(UNDELIMITED);
                   arg2 = getNextToken(DELIMITED);
-
                   if((arg1 == null) || !validNum(arg1) || (arg2 == null))
                      return params;
-
                   params.setIntArgs( (new Integer(arg1)).intValue(), 1);
                   params.setStrArgs(arg2, 1);
                   break;
@@ -147,13 +138,16 @@ public class Parser
 
 
           // Commands with one optional letter argument.
-          case 7: arg1=getNextToken(UNDELIMITED);
+          case 7: arg1=getNextToken(UNDELIMITED);                  
+          System.out.println("7");
+
                   if(arg1 != null)
                   {
                      arg1 = arg1.toUpperCase();
                      if((arg1.length() > 1) || (validCMDS.indexOf(arg1) < 0))
                             return params;
-                  }
+                  }             
+
                   params.setOptArgs(arg1, 1);
                   break;
 
@@ -163,8 +157,9 @@ public class Parser
 
       // Check if arguments remain (error) and if not clear syntax error flag
 
-      if(moreTokensLeft())
-         return params;
+      if(moreTokensLeft()) {
+    	  return params;
+      }
       else
          params.setOkSyntax();
 

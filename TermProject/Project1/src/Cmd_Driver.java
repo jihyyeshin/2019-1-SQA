@@ -275,10 +275,8 @@ public class Cmd_Driver
               Msg.wLMsg(FILE.GetLine(i));
           FILE.SetCLN(end);
        }
-       
-       return;
-
    }
+
 
    public void Cmd_S(File_Buffer FILE, int nLines)
    {
@@ -305,11 +303,10 @@ public class Cmd_Driver
        {
           CLN=FILE.GetCLN();
           end=Math.min(CLN+nLines-1,FILE.NumLins());
-          for(i=CLN; i<end; i++)
+          for(i=CLN; i<=end; i++)
               FILE.DelLine(CLN);
           FILE.SetCLN( Math.min(CLN,FILE.NumLins()) );
-       }
-
+       }       
    }
 
 
@@ -346,11 +343,12 @@ public class Cmd_Driver
           Msg.ERROR(6);
           return;
        }
+       
 
        // Now find matches in the strings over the line range & print them
 
        CLN=FILE.GetCLN();
-       end=Math.min(CLN+nLines,FILE.NumLins());
+       end=Math.min(CLN+nLines-1,FILE.NumLins());
    
        for(i=CLN; i<=end; i++) 
        {
@@ -457,7 +455,7 @@ public class Cmd_Driver
    {
        // Save CLN and call Y command to yank the lines
 
-       int CLN=FILE.GetCLN();   
+       int CLN=FILE.GetCLN();
        Cmd_Y(FILE,nLines);
 
        // Restore CLN to original and call D command to delete the yanked lines

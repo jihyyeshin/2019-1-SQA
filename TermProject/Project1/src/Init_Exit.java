@@ -73,7 +73,7 @@ public class Init_Exit
           if(Nlines == 0)                    // File nulled if NO Buff lines!
              Msg.ERROR(2);
           else                               // Rewrite file with all buff lines.
-             for(i=1; i<Nlines; i++)
+             for(i=1; i<=Nlines; i++)
                  editFile.writeln(FILE.GetLine(i));
 
           editFile.close();
