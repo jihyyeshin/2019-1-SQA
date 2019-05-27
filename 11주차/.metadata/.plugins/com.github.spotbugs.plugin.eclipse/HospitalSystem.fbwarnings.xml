@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.0-beta1" sequence="1" timestamp="1558366494740" analysisTimestamp="1558366420604" release="">
+  <Project projectName="HospitalSystem">
+    <Jar>C:\Users\tlsjh\OneDrive\&#48148;&#53461; &#54868;&#47732;\JIHYE\4&#54617;&#45380; 1&#54617;&#44592;\&#53580;&#49828;&#54021;\&#49892;&#49845;\11&#51452;&#52264;\HospitalSystem\bin</Jar>
+    <AuxClasspathEntry>C:\Users\tlsjh\OneDrive\&#48148;&#53461; &#54868;&#47732;\JIHYE\4&#54617;&#45380; 1&#54617;&#44592;\&#53580;&#49828;&#54021;\&#49892;&#49845;\11&#51452;&#52264;\HospitalSystem\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Program Files\Java\jdk1.8.0_121\jre\lib\rt.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Program Files\Java\jdk1.8.0_121\jre\lib\jce.jar</AuxClasspathEntry>
+    <SrcDir>C:\Users\tlsjh\OneDrive\&#48148;&#53461; &#54868;&#47732;\JIHYE\4&#54617;&#45380; 1&#54617;&#44592;\&#53580;&#49828;&#54021;\&#49892;&#49845;\11&#51452;&#52264;\HospitalSystem\src</SrcDir>
+  </Project>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="ExaminationRoom">
+      <SourceLine classname="ExaminationRoom" sourcefile="ExaminationRoom.java" sourcepath="ExaminationRoom.java"/>
+    </Class>
+    <Method classname="ExaminationRoom" name="compareTo" signature="(LExaminationRoom;)I" isStatic="false">
+      <SourceLine classname="ExaminationRoom" start="15" end="21" startBytecode="0" endBytecode="117" sourcefile="ExaminationRoom.java" sourcepath="ExaminationRoom.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_SELF_USE_OBJECT" priority="2" rank="8" abbrev="Eq" category="CORRECTNESS" first="1">
+    <Class classname="ExaminationRoom">
+      <SourceLine classname="ExaminationRoom" sourcefile="ExaminationRoom.java" sourcepath="ExaminationRoom.java"/>
+    </Class>
+    <Method classname="ExaminationRoom" name="equals" signature="(LExaminationRoom;)Z" isStatic="false">
+      <SourceLine classname="ExaminationRoom" start="25" end="29" startBytecode="0" endBytecode="89" sourcefile="ExaminationRoom.java" sourcepath="ExaminationRoom.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="HE_EQUALS_USE_HASHCODE" priority="2" rank="16" abbrev="HE" category="BAD_PRACTICE" first="1">
+    <Class classname="ExaminationRoom">
+      <SourceLine classname="ExaminationRoom" sourcefile="ExaminationRoom.java" sourcepath="ExaminationRoom.java"/>
+    </Class>
+    <Method classname="ExaminationRoom" name="equals" signature="(LExaminationRoom;)Z" isStatic="false">
+      <SourceLine classname="ExaminationRoom" start="25" end="29" startBytecode="0" endBytecode="89" sourcefile="ExaminationRoom.java" sourcepath="ExaminationRoom.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="DMI_BAD_MONTH" priority="2" rank="7" abbrev="DMI" category="CORRECTNESS" first="1">
+    <Class classname="Hospital">
+      <SourceLine classname="Hospital" sourcefile="Hospital.java" sourcepath="Hospital.java"/>
+    </Class>
+    <Method classname="Hospital" name="initializeHospital" signature="()V" isStatic="false">
+      <SourceLine classname="Hospital" start="21" end="60" startBytecode="0" endBytecode="803" sourcefile="Hospital.java" sourcepath="Hospital.java"/>
+    </Method>
+    <Int value="12" role="INT_VALUE"/>
+    <Method classname="java.util.GregorianCalendar" name="&lt;init&gt;" signature="(III)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.GregorianCalendar" start="640" end="641" startBytecode="0" endBytecode="39" sourcefile="GregorianCalendar.java" sourcepath="java/util/GregorianCalendar.java"/>
+    </Method>
+    <SourceLine classname="Hospital" start="41" end="41" startBytecode="258" endBytecode="258" sourcefile="Hospital.java" sourcepath="Hospital.java"/>
+  </BugInstance>
+  <BugInstance type="ES_COMPARING_STRINGS_WITH_EQ" priority="2" rank="11" abbrev="ES" category="BAD_PRACTICE" first="1">
+    <Class classname="Hospital">
+      <SourceLine classname="Hospital" sourcefile="Hospital.java" sourcepath="Hospital.java"/>
+    </Class>
+    <Method classname="Hospital" name="addExaminationRoom" signature="(LExaminationRoom;)V" isStatic="false">
+      <SourceLine classname="Hospital" start="63" end="71" startBytecode="0" endBytecode="31" sourcefile="Hospital.java" sourcepath="Hospital.java"/>
+    </Method>
+    <Type descriptor="Ljava/lang/String;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.String" start="111" end="3141" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Type>
+    <LocalVariable name="roomNumber" register="4" pc="32" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <LocalVariable name="thisNumber" register="2" pc="32" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="Hospital" start="66" end="66" startBytecode="34" endBytecode="34" sourcefile="Hospital.java" sourcepath="Hospital.java"/>
+    <SourceLine classname="Hospital" start="66" end="66" startBytecode="34" endBytecode="34" sourcefile="Hospital.java" sourcepath="Hospital.java"/>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH" priority="2" rank="8" abbrev="NP" category="CORRECTNESS" first="1">
+    <Class classname="Hospital">
+      <SourceLine classname="Hospital" sourcefile="Hospital.java" sourcepath="Hospital.java"/>
+    </Class>
+    <Method classname="Hospital" name="checkInDoctor" signature="(LDoctor;)V" isStatic="false">
+      <SourceLine classname="Hospital" start="75" end="109" startBytecode="0" endBytecode="353" sourcefile="Hospital.java" sourcepath="Hospital.java"/>
+    </Method>
+    <LocalVariable name="examinationRoom" register="2" pc="123" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="Hospital" start="102" end="102" startBytecode="136" endBytecode="136" sourcefile="Hospital.java" sourcepath="Hospital.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="Hospital" start="82" end="82" startBytecode="37" endBytecode="37" sourcefile="Hospital.java" sourcepath="Hospital.java" role="SOURCE_LINE_NULL_VALUE"/>
+    <SourceLine classname="Hospital" start="97" end="97" startBytecode="126" endBytecode="126" sourcefile="Hospital.java" sourcepath="Hospital.java" role="SOURCE_LINE_KNOWN_NULL"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="1" rank="15" abbrev="ST" category="STYLE" first="1">
+    <Class classname="Hospital">
+      <SourceLine classname="Hospital" sourcefile="Hospital.java" sourcepath="Hospital.java"/>
+    </Class>
+    <Method classname="Hospital" name="initializeHospital" signature="()V" isStatic="false">
+      <SourceLine classname="Hospital" start="21" end="60" startBytecode="0" endBytecode="803" sourcefile="Hospital.java" sourcepath="Hospital.java"/>
+    </Method>
+    <Field classname="Hospital" name="examinationRooms" signature="Ljava/util/ArrayList;" isStatic="true">
+      <SourceLine classname="Hospital" sourcefile="Hospital.java" sourcepath="Hospital.java"/>
+    </Field>
+    <SourceLine classname="Hospital" start="21" end="21" startBytecode="7" endBytecode="7" sourcefile="Hospital.java" sourcepath="Hospital.java"/>
+    <SourceLine classname="Hospital" start="21" end="21" startBytecode="7" endBytecode="7" sourcefile="Hospital.java" sourcepath="Hospital.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="1" rank="15" abbrev="ST" category="STYLE" first="1">
+    <Class classname="Hospital">
+      <SourceLine classname="Hospital" sourcefile="Hospital.java" sourcepath="Hospital.java"/>
+    </Class>
+    <Method classname="Hospital" name="setExaminationRooms" signature="(Ljava/util/ArrayList;)V" isStatic="false">
+      <SourceLine classname="Hospital" start="240" end="241" startBytecode="0" endBytecode="78" sourcefile="Hospital.java" sourcepath="Hospital.java"/>
+    </Method>
+    <Field classname="Hospital" name="examinationRooms" signature="Ljava/util/ArrayList;" isStatic="true">
+      <SourceLine classname="Hospital" sourcefile="Hospital.java" sourcepath="Hospital.java"/>
+    </Field>
+    <SourceLine classname="Hospital" start="240" end="240" startBytecode="1" endBytecode="1" sourcefile="Hospital.java" sourcepath="Hospital.java"/>
+    <SourceLine classname="Hospital" start="240" end="240" startBytecode="1" endBytecode="1" sourcefile="Hospital.java" sourcepath="Hospital.java"/>
+  </BugInstance>
+  <BugInstance type="DM_NEXTINT_VIA_NEXTDOUBLE" priority="2" rank="18" abbrev="Dm" category="PERFORMANCE" first="1">
+    <Class classname="Patient">
+      <SourceLine classname="Patient" sourcefile="Patient.java" sourcepath="Patient.java"/>
+    </Class>
+    <Method classname="Patient" name="generatePriority" signature="()I" isStatic="false">
+      <SourceLine classname="Patient" start="15" end="17" startBytecode="0" endBytecode="88" sourcefile="Patient.java" sourcepath="Patient.java"/>
+    </Method>
+    <SourceLine classname="Patient" start="17" end="17" startBytecode="17" endBytecode="17" sourcefile="Patient.java" sourcepath="Patient.java"/>
+    <SourceLine classname="Patient" start="17" end="17" startBytecode="17" endBytecode="17" sourcefile="Patient.java" sourcepath="Patient.java"/>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" first="1">
+    <Class classname="Person">
+      <SourceLine classname="Person" sourcefile="Person.java" sourcepath="Person.java"/>
+    </Class>
+    <Method classname="Person" name="getFullName" signature="()Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="Person" start="29" end="33" startBytecode="0" endBytecode="127" sourcefile="Person.java" sourcepath="Person.java"/>
+    </Method>
+    <SourceLine classname="Person" start="29" end="29" startBytecode="4" endBytecode="4" sourcefile="Person.java" sourcepath="Person.java"/>
+    <SourceLine classname="Person" start="29" end="29" startBytecode="4" endBytecode="4" sourcefile="Person.java" sourcepath="Person.java"/>
+  </BugInstance>
+  <BugInstance type="RV_EXCEPTION_NOT_THROWN" priority="1" rank="1" abbrev="RV" category="CORRECTNESS" first="1">
+    <Class classname="Person">
+      <SourceLine classname="Person" sourcefile="Person.java" sourcepath="Person.java"/>
+    </Class>
+    <Method classname="Person" name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/util/GregorianCalendar;)V" isStatic="false">
+      <SourceLine classname="Person" start="10" end="17" startBytecode="0" endBytecode="160" sourcefile="Person.java" sourcepath="Person.java"/>
+    </Method>
+    <Method classname="java.lang.Exception" name="&lt;init&gt;" signature="(Ljava/lang/String;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Exception" start="66" end="67" startBytecode="0" endBytecode="33" sourcefile="Exception.java" sourcepath="java/lang/Exception.java"/>
+    </Method>
+    <SourceLine classname="Person" start="15" end="15" startBytecode="34" endBytecode="34" sourcefile="Person.java" sourcepath="Person.java"/>
+    <SourceLine classname="Person" start="15" end="15" startBytecode="34" endBytecode="34" sourcefile="Person.java" sourcepath="Person.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED" priority="1" rank="3" abbrev="RV" category="CORRECTNESS" first="1">
+    <Class classname="Person">
+      <SourceLine classname="Person" sourcefile="Person.java" sourcepath="Person.java"/>
+    </Class>
+    <Method classname="Person" name="getFullName" signature="()Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="Person" start="29" end="33" startBytecode="0" endBytecode="127" sourcefile="Person.java" sourcepath="Person.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="toLowerCase" signature="()Ljava/lang/String;" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="2670" end="2670" startBytecode="0" endBytecode="31" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="Person" start="29" end="29" startBytecode="4" endBytecode="4" sourcefile="Person.java" sourcepath="Person.java"/>
+    <SourceLine classname="Person" start="29" end="29" startBytecode="4" endBytecode="4" sourcefile="Person.java" sourcepath="Person.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_NO_SIDE_EFFECT" priority="2" rank="17" abbrev="RV" category="STYLE" first="1">
+    <Class classname="Person">
+      <SourceLine classname="Person" sourcefile="Person.java" sourcepath="Person.java"/>
+    </Class>
+    <Method classname="Person" name="getFullName" signature="()Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="Person" start="29" end="33" startBytecode="0" endBytecode="127" sourcefile="Person.java" sourcepath="Person.java"/>
+    </Method>
+    <Method classname="java.lang.Character" name="toUpperCase" signature="(C)C" isStatic="true" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Character" start="6369" end="6369" startBytecode="0" endBytecode="29" sourcefile="Character.java" sourcepath="java/lang/Character.java"/>
+    </Method>
+    <SourceLine classname="Person" start="30" end="30" startBytecode="16" endBytecode="16" sourcefile="Person.java" sourcepath="Person.java"/>
+    <SourceLine classname="Person" start="30" end="30" startBytecode="16" endBytecode="16" sourcefile="Person.java" sourcepath="Person.java"/>
+  </BugInstance>
+  <BugInstance type="DM_STRING_VOID_CTOR" priority="2" rank="18" abbrev="Dm" category="PERFORMANCE" first="1">
+    <Class classname="UI">
+      <SourceLine classname="UI" sourcefile="UI.java" sourcepath="UI.java"/>
+    </Class>
+    <Method classname="UI" name="createOverviewTab" signature="(Ljavafx/scene/control/Tab;LHospital;)V" isStatic="false">
+      <SourceLine classname="UI" start="319" end="344" startBytecode="0" endBytecode="608" sourcefile="UI.java" sourcepath="UI.java"/>
+    </Method>
+    <SourceLine classname="UI" start="327" end="327" startBytecode="76" endBytecode="76" sourcefile="UI.java" sourcepath="UI.java"/>
+    <SourceLine classname="UI" start="327" end="327" startBytecode="76" endBytecode="76" sourcefile="UI.java" sourcepath="UI.java"/>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" rank="18" abbrev="SBSC" category="PERFORMANCE" first="1">
+    <Class classname="UI">
+      <SourceLine classname="UI" sourcefile="UI.java" sourcepath="UI.java"/>
+    </Class>
+    <Method classname="UI" name="createOverviewTab" signature="(Ljavafx/scene/control/Tab;LHospital;)V" isStatic="false">
+      <SourceLine classname="UI" start="319" end="344" startBytecode="0" endBytecode="608" sourcefile="UI.java" sourcepath="UI.java"/>
+    </Method>
+    <SourceLine classname="UI" start="329" end="329" startBytecode="87" endBytecode="87" sourcefile="UI.java" sourcepath="UI.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Fri, 17 May 2019 10:03:15 +0900" total_classes="12" referenced_classes="45" total_bugs="15" total_size="669" num_packages="1" java_version="1.8.0_121" vm_version="25.121-b13" cpu_seconds="25.62" clock_seconds="74.14" peak_mbytes="518.40" alloc_mbytes="1024.00" gc_seconds="0.32" priority_3="1" priority_2="10" priority_1="4">
+    <PackageStats package="" total_bugs="15" total_types="12" total_size="669" priority_3="1" priority_2="10" priority_1="4">
+      <ClassStats class="Doctor" sourceFile="Doctor.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="ExaminationRoom" sourceFile="ExaminationRoom.java" interface="false" size="79" bugs="3" priority_2="3"/>
+      <ClassStats class="Hospital" sourceFile="Hospital.java" interface="false" size="162" bugs="5" priority_2="3" priority_1="2"/>
+      <ClassStats class="Patient" sourceFile="Patient.java" interface="false" size="22" bugs="1" priority_2="1"/>
+      <ClassStats class="Person" sourceFile="Person.java" interface="false" size="41" bugs="4" priority_3="1" priority_2="1" priority_1="2"/>
+      <ClassStats class="Specialty" sourceFile="Specialty.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="UI" sourceFile="UI.java" interface="false" size="189" bugs="2" priority_2="2"/>
+      <ClassStats class="UI$1" sourceFile="UI.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="UI$2" sourceFile="UI.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="UI$3" sourceFile="UI.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="UI$4" sourceFile="UI.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="UI$5" sourceFile="UI.java" interface="false" size="33" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="1676" invocations="2" avgMicrosecondsPerInvocation="838464" maxMicrosecondsPerInvocation="1504855" standardDeviationMicrosecondsPerInvocation="666391"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="315" invocations="548" avgMicrosecondsPerInvocation="576" maxMicrosecondsPerInvocation="30703" standardDeviationMicrosecondsPerInvocation="1933"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="139" invocations="551" avgMicrosecondsPerInvocation="252" maxMicrosecondsPerInvocation="2710" standardDeviationMicrosecondsPerInvocation="233"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="123" invocations="216" avgMicrosecondsPerInvocation="573" maxMicrosecondsPerInvocation="39377" standardDeviationMicrosecondsPerInvocation="2768"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="115" invocations="45" avgMicrosecondsPerInvocation="2557" maxMicrosecondsPerInvocation="19179" standardDeviationMicrosecondsPerInvocation="3779"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="111" invocations="45" avgMicrosecondsPerInvocation="2478" maxMicrosecondsPerInvocation="34286" standardDeviationMicrosecondsPerInvocation="5235"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="82" invocations="87" avgMicrosecondsPerInvocation="946" maxMicrosecondsPerInvocation="13887" standardDeviationMicrosecondsPerInvocation="1975"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="82" invocations="89" avgMicrosecondsPerInvocation="925" maxMicrosecondsPerInvocation="14702" standardDeviationMicrosecondsPerInvocation="2091"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="78" invocations="87" avgMicrosecondsPerInvocation="906" maxMicrosecondsPerInvocation="20024" standardDeviationMicrosecondsPerInvocation="2736"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="78" invocations="87" avgMicrosecondsPerInvocation="897" maxMicrosecondsPerInvocation="11809" standardDeviationMicrosecondsPerInvocation="1747"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="74" invocations="81" avgMicrosecondsPerInvocation="914" maxMicrosecondsPerInvocation="7738" standardDeviationMicrosecondsPerInvocation="1457"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="66" invocations="87" avgMicrosecondsPerInvocation="761" maxMicrosecondsPerInvocation="8205" standardDeviationMicrosecondsPerInvocation="1527"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="53" invocations="45" avgMicrosecondsPerInvocation="1196" maxMicrosecondsPerInvocation="40086" standardDeviationMicrosecondsPerInvocation="5987"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1558366494736" release="" codeSize="0" numClasses="0"/>
+  </History>
+</BugCollection>
